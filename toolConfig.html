@@ -12,11 +12,14 @@
 
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Dashboard</title>
 
     <!--<title>Admin Dashboard Panel</title>-->
 </head>
 
 <body>
+    <div id="preloader"></div>
+
     <nav>
         <div class="logo-name">
             <div class="logo-image">
@@ -29,23 +32,23 @@
 
         <div class="menu-items">
             <ul class="nav-links">
-                <li><a href="#">
+                <li><a href="mainWindow.html">
                         <i class="uil  uil-box"></i>
                         <span class="link-name">RoT</span>
                     </a></li>
-                <li><a href="#">
+                <li><a href="toolConfig.html">
                         <i class="uil uil-cog"></i>
                         <span class="link-name">Tool Config</span>
                     </a></li>
-                <li><a href="#">
+                <li><a href="appPacakge.html">
                         <i class="uil  uil-apps"></i>
                         <span class="link-name">App Package</span>
                     </a></li>
-                <li><a href="#">
+                <li><a href="ispTerminal.html">
                         <i class="uil uil-laptop"></i>
                         <span class="link-name">ISP & Terminal</span>
                     </a></li>
-                <li><a href="#">
+                <li><a href="systemUpdate.html">
                         <i class="uil uil-refresh"></i>
                         <span class="link-name">System Update</span>
                     </a></li>
@@ -87,41 +90,25 @@
 
             <!--<img src="images/profile.jpg" alt="">-->
         </div>
-        
-        <div class="dash-content"style="text-align:center">
-            <div class="overview"style="text-align:center">
-                <div class="title">
 
-                    <span class="text"style="text-align:center">There is NO RoT!</span>
+        <div class="dash-content" style="text-align:center">
+            <div class="overview">
+                <div class="title-2">
+
+                    <span class="text">Tool Config Page</span>
                 </div>
-
-
             </div>
-
-            <div class="activity">
-                <div class="title">
-
-                    <span class="text" style="text-align:center">You Will need a RoT to secure your bainaries<br>
-                        Please click below to create a RoT</span>
-                </div>
-
-                <div class="btn">
-                    
-                       
-                        <span class="link-name">
-                           Tool config
-
-                            </a>
-                        </span>
-                    
-
-                </div>
-
-            </div>
+            <br>
         </div>
     </section>
 
     <script src="app.js"></script>
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            loader.style.display = "none"
+        })
+    </script>
 
 </body>
 
