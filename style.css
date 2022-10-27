@@ -277,7 +277,7 @@ nav.close ~ .dashboard .top{
 .dash-content .title{
     display: flex;
     align-items: center;
-    margin: 60px 0 30px 0;
+    margin: 60px 0 40px 0;
 }
 .dash-content .title i{
     position: relative;
@@ -295,7 +295,7 @@ nav.close ~ .dashboard .top{
     font-size: 24px;
     font-weight: 500;
     color: var(--text-color);
-    margin-left: 10px;
+   
 }
 .dash-content .boxes{
     display: flex;
@@ -457,7 +457,15 @@ nav.close ~ .dashboard .top{
     }
 }
 
-img{
-  width: 35%;
-  height: auto;
+nav .logo-image img {
+    width: 61px;
+    object-fit: contain;
+    border-radius: 0%;
+}
+
+.top {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 10px;
 }
