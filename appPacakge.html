@@ -97,6 +97,9 @@
 
                     <span class="text">App Package Package</span>
                 </div>
+                <div>
+                    <button class="button" type="button" id="exeButton">Run .exe</button>
+                </div>
             </div>
             <br>
         </div>
@@ -108,6 +111,29 @@
         window.addEventListener("load", function () {
             loader.style.display = "none"
         })
+
+        var child = require('child_process').execFile;
+
+        var executablePath = "D:\\Electron\\sample.exe";
+
+
+
+        child(executablePath, function (err, data) {
+
+            if (err) {
+
+                console.error(err);
+
+                return;
+
+            }
+
+
+
+            console.log(data.toString());
+
+        });
+        document.getElementById('exeButton').onclick = runScript;
     </script>
 
 </body>
