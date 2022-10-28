@@ -19,96 +19,114 @@
 
 <body>
     <div id="preloader"></div>
-
-    <nav>
-        <div class="logo-name">
-            <div class="logo-image">
-                <img src="Logo.png" alt="logo">
-                <!--<img src="images/logo.png" alt="">-->
-            </div>
+    <div id="content">
 
 
-        </div>
-
-        <div class="menu-items">
-            <ul class="nav-links">
-                <li><a href="mainWindow.html">
-                        <i class="uil  uil-box"></i>
-                        <span class="link-name">RoT</span>
-                    </a></li>
-                <li><a href="toolConfig.html">
-                        <i class="uil uil-cog"></i>
-                        <span class="link-name">Tool Config</span>
-                    </a></li>
-                <li><a href="appPacakge.html">
-                        <i class="uil  uil-apps"></i>
-                        <span class="link-name">App Package</span>
-                    </a></li>
-                <li><a href="ispTerminal.html">
-                        <i class="uil uil-laptop"></i>
-                        <span class="link-name">ISP & Terminal</span>
-                    </a></li>
-                <li><a href="systemUpdate.html">
-                        <i class="uil uil-refresh"></i>
-                        <span class="link-name">System Update</span>
-                    </a></li>
-
-            </ul>
-
-            <ul class="logout-mode">
-
-
-                <li class="mode">
-                    <a href="#">
-                        <i class="uil uil-moon"></i>
-                        <span class="link-name">Dark Mode</span>
-                    </a>
-
-                    <div class="mode-toggle">
-                        <span class="switch"></span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <section class="dashboard">
-        <div class="top">
-
-
-            <i class="uil uil-bars sidebar-toggle"></i>
-
-            <div class="title">
-                <span class="text">Selected Device: </span>
-                <span class="text">None </span>
-            </div>
-
-            <div class="title">
-                <span class="text">Status: </span>
-                <span class="text">Disconnected </span>
-            </div>
-
-            <!--<img src="images/profile.jpg" alt="">-->
-        </div>
-
-        <div class="dash-content" style="text-align:center">
-            <div class="overview">
-                <div class="title-2">
-
-                    <span class="text">Tool Config Page</span>
+        <nav>
+            <div class="logo-name">
+                <div class="logo-image">
+                    <img src="Logo.png" alt="logo">
+                    <!--<img src="images/logo.png" alt="">-->
                 </div>
-            </div>
-            <br>
-        </div>
-    </section>
 
-    <script src="app.js"></script>
-    <script>
-        var loader = document.getElementById("preloader");
-        window.addEventListener("load", function () {
-            loader.style.display = "none"
-        })
-    </script>
+
+            </div>
+
+            <div class="menu-items">
+                <ul class="nav-links">
+                    <li><a href="mainWindow.html">
+                            <i class="uil  uil-box"></i>
+                            <span class="link-name">RoT</span>
+                        </a></li>
+                    <li><a href="toolConfig.html">
+                            <i class="uil uil-cog"></i>
+                            <span class="link-name">Tool Config</span>
+                        </a></li>
+                    <li><a href="appPacakge.html">
+                            <i class="uil  uil-apps"></i>
+                            <span class="link-name">App Package</span>
+                        </a></li>
+                    <li><a href="ispTerminal.html">
+                            <i class="uil uil-laptop"></i>
+                            <span class="link-name">ISP & Terminal</span>
+                        </a></li>
+                    <li><a href="systemUpdate.html">
+                            <i class="uil uil-refresh"></i>
+                            <span class="link-name">System Update</span>
+                        </a></li>
+
+                </ul>
+
+                <ul class="logout-mode">
+
+
+                    <li class="mode">
+                        <a href="#">
+                            <i class="uil uil-moon"></i>
+                            <span class="link-name">Dark Mode</span>
+                        </a>
+
+                        <div class="mode-toggle">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="dashboard">
+            <div class="top">
+
+
+                <i class="uil uil-bars sidebar-toggle"></i>
+
+                <div class="title">
+                    <span class="text">Selected Device: </span>
+                    <span class="text">None </span>
+                </div>
+
+                <div class="title">
+                    <span class="text">Status: </span>
+                    <span class="text">Disconnected </span>
+                </div>
+
+                <!--<img src="images/profile.jpg" alt="">-->
+            </div>
+
+            <div class="dash-content" style="text-align:center">
+                <div class="overview">
+                    <div class="title-2">
+
+                        <span class="text">Tool Config Page</span>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </section>
+
+        <script src="app.js"></script>
+        <script>
+            var preloader;
+
+            function loadNow(opacity) {
+                if (opacity <= 0) {
+                    displayContent();
+                } else {
+                    preloader.style.opacity = opacity;
+                    window.setTimeout(function () {
+                        loadNow(opacity - 10.05);
+                    }, 950);
+                }
+            }
+            function displayContent() {
+                preloader.style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            }
+            document.addEventListener("DOMContentLoaded", function () {
+                preloader = document.getElementById('preloader');
+                loadNow(1);
+            });
+        </script>
 
 </body>
 
