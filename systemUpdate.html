@@ -93,12 +93,16 @@
 
         <div class="dash-content" style="text-align:center">
             <div class="overview">
+
+
                 <div class="title-2">
 
                     <span class="text">System Update Page</span>
                 </div>
 
-                <button type="button" id="script-button"> Get Python code</button>
+                <br>
+
+                <button class="button" type="button" id="script-button">Run Python code</button>
 
                 <script src="http://code.jquery.com/jquery-3.3.1.min.js"
                     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -119,7 +123,7 @@
             request.onreadystatechange = function () {
                 if (request.readyState === 4) {
                     if (request.status === 200) {
-                        alert('Successful .... ' + request.responseText);
+                        alert('Python exicuted sucessfully .... ' );
                     } else {
                         alert('Something went wrong, status was ' + request.status);
                     }
